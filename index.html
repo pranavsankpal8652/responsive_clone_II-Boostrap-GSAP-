@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="x-icon" href="images/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <title>Bus Ticket Booking Online | Red Bus</title>
+</head>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-sticky top-0 bg-white z-3">
+            <div class="container header">
+                <a class="navbar-brand px-3" href="#">
+                    <img src="images/icon.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse p-sm-4 p-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item d-flex bus_ticket">
+                        <div class="hstack gap-3">
+                            <div class="d-sm_none" style="height: 20px;width:20px">
+                                <div class="vr"></div>
+                            </div>
+                        </div>
+                        <a class="nav-link bg-danger p-lg-3 pe-sm-4 text-center rounded-2 d-flex flex-lg-column flex-sm-row" aria-current="page" href="#">
+                            <img src="images/redbus-logo.svg" width="70px" >
+                            <span class="text-white"> Bus Tickets</span> 
+                        </a>
+                    </li>
+                    <li class="nav-item rail_ticket">
+                        <a class="nav-link p-lg-3 px-sm-0 rounded-2  mx-lg-3 mx-sm-0 mt-sm-2 position-relative d-flex flex-lg-column flex-sm-row bg-body-secondary rail_img" href="#">
+                            <img src="images/rail_vertical_black.svg" width="70px" > 
+                            <span >Train Tickets</span>
+                            <span class="position-absolute end-0 top-0 text-white bg-success rounded-1 fs-6 off">₹60 off</span>
+                        </a>
+                    </li>
+                </ul>
+            <ul class="d-flex flex-lg-row flex-sm-column gap-lg-5 gap-sm-3 helpers">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <i class="fa-solid fa-headset"></i>
+                            Help
+                        </a>
+                      </li>
+                    <li class="nav-item dropdown relative">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-language"></i>
+                            English
+                        </a>
+                        <ul class="dropdown-menu absolute">
+                            <li><a class="dropdown-item active" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                            <li><a class="dropdown-item" href="#">Telugu</a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item dropdown relative">
+                            <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user"></i>
+                                Account                         
+                            </a>
+                            <ul class="dropdown-menu absolute">
+                                <li><a class="dropdown-item " href="#">Cancel Ticket</a></li>
+                                <li><a class="dropdown-item" href="#">Change Travel Date</a></li>
+                                <li><a class="dropdown-item" href="#">Show My Ticket</a></li>
+                                <li><a class="dropdown-item" href="#">Email/SMS</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Login/Sing Up</a></li>
+                            </ul>
+                        </li>
+            </ul>
+        </div>
+    </div>
+        </nav>
+
+        <section class="container-fluid home_banner bg-danger ">
+             <div class="container  d-flex flex-column gap-4 justify-content-between  position-relative">
+                <div class="heading text-center text-white fs-1 my-5 banner_title">
+                    India's No. 1 Online Bus Ticket Booking Site
+                </div>
+                  <div class="input_box d-flex flex-xl-row flex-sm-column align-items-center justify-content-between bg-white rounded-5 position-absolute top-100  my-5 p-lg-3 p-xl-0">
+                    <div class="d-flex flex-lg-row flex-sm-column align-items-center gap-xl-5 px-xl-3" >
+                        <div class="from d-flex align-items-center gap-xl-2">
+                            <i class="fa-solid fa-bus fs-4"></i>  
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-5">From</span>
+                                <input type="text"  class="border border-0 fs-4" autofocus>
+                            </div>
+                        </div> 
+                        <div class="separator from_to_separator">
+                            <div class="position-absolute d-sm-none d-xl-block  border border-1 border-secondary d-flex align-items-center justify-content-center rounded-circle p-2" style="width: 40px; height:40px;">
+                                <i class="fa-solid fa-right-left"></i> 
+                            </div>
+                        </div>
+                        
+                        <div class="to d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-bus fs-4"></i>  
+                            <div class="d-flex flex-column gap-1">
+                                <span class="fs-5">to</span>
+                                <input type="text" class="border border-0 fs-4">
+                            </div>
+                        </div>  
+                        <div class="separator">
+                            
+                        </div> 
+                        <div class="date d-flex align-items-center gap-3">
+                            <input type="date" class="border border-0 fs-4">
+                            <span class="fs-5">Date</span>
+                            </div>
+                    </div>
+                    <div class="search_bus bg-danger p-3 rounded-lg-end-5 align-self-stretch  d-flex align-items-center justify-content-center search_bus" role="button" tabindex="0">
+                        <button class="bg-danger text-white  border border-0" >SEARCH BUSES</button>
+
+                    </div>        
+                        
+                </div>  
+                </div> 
+                
+                
+                 
+        </section>  
+        
+        <div class="offers bg-white p-1 p-sm-4 rounded-4 w-75 ">
+         <div class="title fs-2 fw-bold text-center text-sm-start">Trending Offers</div>
+         
+          <div id="carouselExample" class="carousel slide row">
+              <div class="carousel-inner col-lg-4 col-12">
+                <div class="carousel-item active">
+                  <div class="row">
+                      <div class="col-xxl-4 col-lg-6 col-12 text-white">
+                          <div class="d-flex align-items-center gap-3 bg-success bg-gradient py-2 ps-1 "  role="button" tabindex="0" >
+                              <img src="images/tile-80X80.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-success w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 250 on bus tickets.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-sucess text-white" >
+                                  first
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 text-white d-sm-block d-none" >
+                          <div class="d-flex align-items-center gap-3 bg-primary bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/SUPERHIT.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-primary w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 300 on AP, TS routes.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-primary">
+                                  SUPERHIT
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 mx-lg-auto py-lg-3 py-xxl-0 text-white  d-sm-block d-none">
+                          <div class="d-flex align-items-center gap-3 bg-info bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/80x80.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-info w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 300 on Chartered Bus.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-primary">
+                                  CHARATERD15
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row">
+                      <div class="col-xxl-4 col-lg-6 col-12 text-white d-sm-block d-none">
+                          <div class="d-flex align-items-center gap-3 bg-success bg-gradient py-2 ps-1 "  role="button" tabindex="0" >
+                              <img src="images/tile-80X80.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-success w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 250 on bus tickets.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-sucess text-white" >
+                                  first
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 text-white " >
+                          <div class="d-flex align-items-center gap-3 bg-primary bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/SUPERHIT.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-primary w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 300 on AP, TS routes.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-primary">
+                                  SUPERHIT
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 mx-lg-auto py-lg-3 py-xxl-0 text-white  d-sm-block d-none">
+                          <div class="d-flex align-items-center gap-3 bg-info bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/80x80.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-info w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 300 on Chartered Bus.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-primary">
+                                  CHARATERD15
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row">
+                      <div class="col-xxl-4 col-lg-6 col-12 text-white d-sm-block d-none">
+                          <div class="d-flex align-items-center gap-3 bg-success bg-gradient py-2 ps-1 "  role="button" tabindex="0" >
+                              <img src="images/tile-80X80.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-success w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 250 on bus tickets.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-sucess text-white" >
+                                  first
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 text-white d-sm-block d-none" >
+                          <div class="d-flex align-items-center gap-3 bg-primary bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/SUPERHIT.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-primary w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 300 on AP, TS routes.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-primary">
+                                  SUPERHIT
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 mx-lg-auto py-lg-3 py-xxl-0 text-white">
+                          <div class="d-flex align-items-center gap-3 bg-info bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/80x80.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-info w-25 text-center rounded-2">Bus</h6>
+                                <h5 class="card-text my-2">Save up to Rs 300 on Chartered Bus.</h5>
+                                <p>Valid till 30 Nov</p>
+                                <a href="#" class="btn btn-primary">
+                                  CHARATERD15
+                                  <i class="fa-regular fa-copy"></i>
+                                </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev slider_btn_prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <i class="fa-solid fa-circle-chevron-left fa-2xl"></i>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next slider_btn_nxt" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <i class="fa-solid fa-circle-chevron-right fa-2xl"></i>
+                  <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+      </div>  
+        <div class="container p-2 my-5" id="train_animator_point">
+          <div class="d-flex justify-content-between">
+              <div class="title fs-1 fw-medium">Government Buses</div>
+              <button type="button" class="btn border border-black text-primary rounded-pill">View All</button>
+          </div>
+          <div id="carouselExample2" class="carousel slide row">
+              <div class="carousel-inner col-lg-4 col-12">
+                <div class="carousel-item active">
+                  <div class="row p-3 my-3">
+                      <div class="col-xxl-4 col-lg-6 col-12">
+                          <div class="d-flex gap-1 bg-light bg-gradient py-2 ps-1 "  role="button" tabindex="0" >
+                              <img src="images/RSRTC.svg" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-light text-black fs-4 fw-bold ">RSRTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.71</span></h6>
+                                <hr class="dropdown-divider">
+                                <h5 class="card-text my-2">राजस्थान स्टेट रोड ट्रांसपोर्ट कॉर्पोरशन</h5>
+                                <p class="text-center">6000 services including Deluxe,<br> Ordinary and more<br></p>
+                                 <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                  Official booking partner of RSRTC</p>
+                              </div>                                  
+                          </div>
+                          <a href="#" class="btn  text-black bg-danger-subtle w-100 " >
+                            Use 'FIRST' to save upto  ₹250 (only for first time users)
+                          </a>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6  d-sm-block d-none p-md-5 p-lg-0" >
+                          <div class="d-flex gap-3 bg-light bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/TSRTC.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-light text-black fs-4 fw-bold ">TSRTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.71</span></h6>
+                                <hr class="dropdown-divider">
+                                <h5 class="card-text my-2">
+                                  తెలంగాణ రాష్ట్ర రోడ్డు రవాణా సంస్థ</h5>
+                                  <p class="text-center">1450 services including Garuda Plus,<br>Rajdhani and more
+                                  </p>
+                                  <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                   Official booking partner of RSRTC</p>
+                              </div>
+                          </div>
+                          <a href="#" class="btn  text-black bg-danger-subtle w-100" >
+                            Use 'FIRST' to save upto  ₹250 (only for first time users)
+                          </a>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 mx-lg-auto py-lg-4 py-xl-0 px-xl-2 d-sm-block d-none p-md-5 p-lg-0"  >
+                        <div class="d-flex gap-3 bg-light bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                            <img src="images/24978.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                            <div class="card-body">
+                              <h6 class="card-title bg-light text-black fs-4 fw-bold ">NBSTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.93</span></h6>
+                              <hr class="dropdown-divider">
+                              <h5 class="card-text my-2">
+                                উত্তরবঙ্গ রাজ্য পরিবহন কর্পোরেশন</h5>
+                                <p class="text-center">30 services including Volvo Bus,<br> AC & Non AC Bus and more
+                                </p>
+                                <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                 Official booking partner of RSRTC</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn  text-black bg-danger-subtle w-100" >
+                          Use 'FIRST' to save upto  ₹250 (only for first time users)
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row p-3 my-3">
+                      <div class="col-xxl-4 col-lg-6 col-12">
+                          <div class="d-flex gap-1 bg-light bg-gradient py-2 ps-1 "  role="button" tabindex="0" >
+                              <img src="images/RSRTC.svg" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-light text-black fs-4 fw-bold ">RSRTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.71</span></h6>
+                                <hr class="dropdown-divider">
+                                <h5 class="card-text my-2">राजस्थान स्टेट रोड ट्रांसपोर्ट कॉर्पोरशन</h5>
+                                <p class="text-center">6000 services including Deluxe,<br> Ordinary and more<br></p>
+                                 <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                  Official booking partner of RSRTC</p>
+                              </div>                                  
+                          </div>
+                          <a href="#" class="btn  text-black bg-danger-subtle w-100 " >
+                            Use 'FIRST' to save upto  ₹250 (only for first time users)
+                          </a>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6  d-sm-block d-none p-md-5 p-lg-0" >
+                          <div class="d-flex gap-3 bg-light bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/TSRTC.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-light text-black fs-4 fw-bold ">TSRTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.71</span></h6>
+                                <hr class="dropdown-divider">
+                                <h5 class="card-text my-2">
+                                  తెలంగాణ రాష్ట్ర రోడ్డు రవాణా సంస్థ</h5>
+                                  <p class="text-center">1450 services including Garuda Plus,<br>Rajdhani and more
+                                  </p>
+                                  <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                   Official booking partner of RSRTC</p>
+                              </div>
+                          </div>
+                          <a href="#" class="btn  text-black bg-danger-subtle w-100" >
+                            Use 'FIRST' to save upto  ₹250 (only for first time users)
+                          </a>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 mx-lg-auto py-lg-4 py-xl-0 px-xl-2 d-sm-block d-none p-md-5 p-lg-0"  >
+                        <div class="d-flex gap-3 bg-light bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                            <img src="images/24978.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                            <div class="card-body">
+                              <h6 class="card-title bg-light text-black fs-4 fw-bold ">NBSTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.93</span></h6>
+                              <hr class="dropdown-divider">
+                              <h5 class="card-text my-2">
+                                উত্তরবঙ্গ রাজ্য পরিবহন কর্পোরেশন</h5>
+                                <p class="text-center">30 services including Volvo Bus,<br> AC & Non AC Bus and more
+                                </p>
+                                <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                 Official booking partner of RSRTC</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn  text-black bg-danger-subtle w-100" >
+                          Use 'FIRST' to save upto  ₹250 (only for first time users)
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="row p-3 my-3">
+                      <div class="col-xxl-4 col-lg-6 col-12">
+                          <div class="d-flex gap-1 bg-light bg-gradient py-2 ps-1 "  role="button" tabindex="0" >
+                              <img src="images/RSRTC.svg" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-light text-black fs-4 fw-bold ">RSRTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.71</span></h6>
+                                <hr class="dropdown-divider">
+                                <h5 class="card-text my-2">राजस्थान स्टेट रोड ट्रांसपोर्ट कॉर्पोरशन</h5>
+                                <p class="text-center">6000 services including Deluxe,<br> Ordinary and more<br></p>
+                                 <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                  Official booking partner of RSRTC</p>
+                              </div>                                  
+                          </div>
+                          <a href="#" class="btn  text-black bg-danger-subtle w-100 " >
+                            Use 'FIRST' to save upto  ₹250 (only for first time users)
+                          </a>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6  d-sm-block d-none p-md-5 p-lg-0" >
+                          <div class="d-flex gap-3 bg-light bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                              <img src="images/TSRTC.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                              <div class="card-body">
+                                <h6 class="card-title bg-light text-black fs-4 fw-bold ">TSRTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.71</span></h6>
+                                <hr class="dropdown-divider">
+                                <h5 class="card-text my-2">
+                                  తెలంగాణ రాష్ట్ర రోడ్డు రవాణా సంస్థ</h5>
+                                  <p class="text-center">1450 services including Garuda Plus,<br>Rajdhani and more
+                                  </p>
+                                  <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                   Official booking partner of RSRTC</p>
+                              </div>
+                          </div>
+                          <a href="#" class="btn  text-black bg-danger-subtle w-100" >
+                            Use 'FIRST' to save upto  ₹250 (only for first time users)
+                          </a>
+                      </div>
+                      <div class="col-xxl-4 col-lg-6 mx-lg-auto py-lg-4 py-xl-0 px-xl-2 d-sm-block d-none p-md-5 p-lg-0"  >
+                        <div class="d-flex gap-3 bg-light bg-gradient py-2 ps-1"  role="button" tabindex="0" >
+                            <img src="images/24978.png" alt="..." width="70px" height="70px" class="rounded-circle">
+                            <div class="card-body">
+                              <h6 class="card-title bg-light text-black fs-4 fw-bold ">NBSTC<span class="text-white bg-success rounded-4 p-1 mx-2">*3.93</span></h6>
+                              <hr class="dropdown-divider">
+                              <h5 class="card-text my-2">
+                                উত্তরবঙ্গ রাজ্য পরিবহন কর্পোরেশন</h5>
+                                <p class="text-center">30 services including Volvo Bus,<br> AC & Non AC Bus and more
+                                </p>
+                                <p class="bg-dark-subtle text-center"><img src="images/icon.png" width="20px" height="20px">
+                                 Official booking partner of RSRTC</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn  text-black bg-danger-subtle w-100" >
+                          Use 'FIRST' to save upto  ₹250 (only for first time users)
+                        </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev slider_btn_prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                  <i class="fa-solid fa-circle-chevron-left fa-2xl" style="color: #5f6267;"></i>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next slider_btn_nxt" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                  <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #646568;"></i>
+                  <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+      </div>
+      <div class="container p-2 px-5 my-5" >
+        <div class="d-flex gap-5">
+          <div class="info">
+            <div class="title fs-2">
+              NOW, <span class="fw-bold">GET MORE THAN<br>JUST BUS</span> TICKETS WITH<br> REDBUS!
+            </div>
+            <div class="h4 p-2 my-4 text-danger border-bottom border-danger border-3 w-50">
+              <img src="images/rail_vertical_red.svg" width="80px">
+              <span class="text-danger fs-5 fw-bold">Train Tickets</span> 
+            </div>
+            <p class="fs-5 my-5">Book IRCTC Train Tickets on redRail simple & superfast booking<br> process with no service fee + no payment gateway charge.</p>
+            <ul class="list-group w-100">
+              <li class="list-group-item">
+                <img src="images/railAuthorized.png">
+                <label class="form-check-label px-3 fw-bolder fs-5" for="firstRadio">Authorised IRCTC Partner</label>
+              </li>
+              <li class="list-group-item py-4">
+                <img src="images/railrefunds.svg">
+                <label class="form-check-label px-3 fw-bolder fs-5" for="secondRadio">Instant refunds on UPI payments</label>
+              </li>
+              <li class="list-group-item">
+               <img src="images/railHasslefree.svg">
+                <label class="form-check-label px-3 fw-bolder fs-5" for="thirdRadio">Hassle- free customer support</label>
+              </li>
+            </ul>
+            <div class="p-3">
+              <button type="button" class="btn btn-danger my-3 fs-5 fw-bold">Book Train Tickets<i class="fa-solid fa-arrow-right px-2"></i></button>
+            </div>
+          </div>
+          <div class="image d-none d-xl-block" id="rail_image">
+            <img src="images/railPop.webp" >
+          </div>
+        </div>
+       
+      </div>
+      <div class="container enjoy_app p-4 bg-danger">
+        <div class="title text-white fs-2 fw-bold">ENJOY THE APP!</div>
+        <div class="d-flex flex-md-row flex-column gap-5 align-items-center">
+          <div class="p-sm-5  bg-white rounded-5 my-5 mx-2 enjoy_banner border border-danger">
+            <ul>
+              <li class="list-group-item">
+                <i class="fa-solid fa-circle-check " style="color: #0c7958;"></i>
+                <label class="form-check-label  px-2 fw-bold" for="firstCheckbox">Quick access </label>
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-circle-check " style="color: #0c7958;"></i>
+                <label class="form-check-label  px-2 fw-bold" for="secondCheckbox">Superior live tracking </label>
+              </li>
+            </ul>
+            <div class="d-flex gap-5 py-4 text-center flex-column flex-md-row">
+              <div class="d-flex gap-2 flex-column ">
+                <span class="fw-bold fs-5">4.5 *</span>
+                50M+ downloads
+              <span class="fw-bold fs-6">Play Store</span>
+              </div>
+              <div class="d-lg-flex d-none" style="height: 100px;">
+                <div class="vr"></div>
+              </div>
+              <div class="d-flex gap-2 flex-column ">
+                <span class="fw-bold fs-5">4.6 *</span>
+                50M+ downloads
+              <span class="fw-bold fs-6">App Store</span>
+              </div>
+
+            </div>
+          </div>
+          <div class="scan text-white"> 
+            <div class="title fs-5 fw-bold">Scan to<br> download</div>
+            <img src="images/qrImage.svg">  
+          </div>
+          <div class="dw text-white text-center">
+            <div class="title fs-5 fw-bold">Download the app<br> on</div>
+            <img src="images/playStore.svg">
+            <img src="images/appStore.svg">
+          </div>
+        </div>
+      </div>
+      <div class="container my-5 position-relative d-none d-md-block">
+        <img src="images/primoHomeBannerComp.webp" class="rounded-5 w-75">
+        <div class="prime_bus_op bg-primary bg-gradient d-flex flex-column text-white position-absolute h-100 rounded-5 p-4">
+          <div class="d-flex align-items-center gap-3 py-4py-4 py-md-0 py-lg-4 ">
+            <i class="fa-regular fa-clock fa-2xl"></i>
+            <div>
+              <h2 class="fw-bold"> On time</h2>
+             <h3>Punctual arrivals on 95% trips</h3> 
+            </div>
+          </div>
+         
+          <div class="d-flex align-items-center gap-3 py-4 py-md-0 py-lg-4 my-3">
+            <i class="fa-solid fa-hands-praying fa-2xl"></i>
+            <div>
+              <h2 class="fw-bold">Friendly Staff</h2>
+              <h3>Always ready to help</h3>
+            </div>
+          </div>
+      
+       
+          <div class="d-flex align-items-center gap-3 py-4">
+            <i class="fa-regular fa-star fa-2xl"></i>
+            <div>
+              <h2 class="fw-bold">Top Rated</h2>
+              <h3>Buses with 4+ star rating</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container my-5 py-4">
+        <div class="title fs-2 fw-bold">Global Presence</div>
+        <div class="d-flex gap-5 p-3 px-5 flex-wrap align-items-center">
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/India.svg">
+            India
+          </div>
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/Colombia.svg">
+            Colombia
+          </div>
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/Peru.svg">
+            Peru
+          </div>
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/Vietnam.svg">
+            Vietnam
+          </div>
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/Singapore.svg">
+            Singapore
+          </div>
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/Peru.svg">
+            Peru
+          </div>
+          <div class="d-flex flex-column align-items-center fw-bold">
+            <img src="images/India.svg">
+            India
+          </div>
+        </div>
+      </div>
+
+      <section class="container-fluid my-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 fs-1 fw-bold">
+              Bus Booking redDeals on redBus
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 fs-5">
+              Don't miss out on these incredible offers, book your bus tickets now and travel with convenience and affordability. Hurry, grab the best bus booking deals before they're gone!s
+            </div>
+          </div>
+          <div class="row p-1  align-items-center justify-content-center gap-0 border border-dark-subtle m-3">
+            <div class="col-8 col-md-2">
+              <img src="images/icon.png">
+            </div>
+            <div class="col">
+              <span class="fw-bold fs-2">Unlock Unbeatable Exclusive redDeals!<span class="text-danger">20% OFF
+              </span></span><br>
+              <span class="text-danger">3947</span> Deals  |<span class="text-danger">1850</span> Bus Operators  |<span class="text-danger">241556</span> Routes
+            </div>
+            <div class="col-0 my-3 col-sm-1 my-sm-0">
+              <button type="button" class="btn btn-danger">Book Now</button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="conatiner-fluid">
+        <div class="container">
+          <div class="row my-3">
+            <div class="col-12">
+              <div class="title fw-bold fs-1">FAQs related to Bus Tickets Booking</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 " role="button" tabindex="0">
+              <div class="h6 pb-2 mb-4 text-danger text-center border-bottom border-danger  border-3">
+                General
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 " role="button" tabindex="0">
+              <div class="h6 pb-2 mb-4 text-black border-bottom border-dark-subtle text-center  border-2">
+                Ticket-related
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 " role="button" tabindex="0">
+              <div class="h6 pb-2 mb-4 text-black border-bottom border-dark-subtle text-center  border-2">
+                Payment
+              </div>
+            </div>
+            <div class="col-7 col-md-4 col-lg-3 col-xl-2 " role="button" tabindex="0">
+              <div class="h6 pb-2 mb-4 text-black border-bottom border-dark-subtle text-center  border-2">
+                Cancellation & Refund
+              </div>
+            </div>
+            <div class="col-5 col-md-4 col-lg-3 col-xl-2 " role="button" tabindex="0">
+              <div class="h6 pb-2 mb-4 text-black border-bottom border-dark-subtle text-center  border-2">
+                Insurance
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      What are the advantages of purchasing a bus ticket with redBus?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">There are many advantages to purchasing online bus tickets with redBus. redBus is India’s most trusted bus ticket company, where you can book any type of private or government-owned bus. redBus allows you to find the different types of buses, choose the preferred bus seats, and find your nearest boarding and dropping points. You can also filter the buses based on timings, like morning, evening, etc.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Why book bus tickets online on redBus?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Booking bus tickets online on redBus is increasingly becoming the preferred choice for travellers due to its numerous advantages over traditional methods. With redBus, customers can book their bus tickets effortlessly from the comfort of their homes, avoiding the inconvenience of standing in long lines at bus stations or travel agencies. Online bus booking offers the luxury of comparing different bus schedules and operators and presents various discount offers and exclusive deals, resulting in significant savings. Payment security is another notable feature of online booking, which ensures that your financial information is well-protected against fraud. Additionally, customers can pick their seats, providing a customized travel experience. Online bus booking platforms give real-time updates about any changes in the bus timetable, including delays or cancellations, enabling better planning. The convenience doesn't stop here; travellers can even compare onboard amenities like charging points or snacks, further enhancing the travel experience.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsethird" aria-expanded="false" aria-controls="flush-collapsethird">
+                      Can I track the location of my booked bus online?
+                    </button>
+                  </h2>
+                  <div id="flush-collapsethird" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Yes, you can track your bus online by using our bus tracking app feature called “Track My Bus”. This feature allows passengers and their families to track the live bus location. You may follow your bus on a map and use the information to plan your trip to the boarding point and to get off at the correct stop. Family and friends may also check the bus position to schedule pick-ups and ensure safety.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      Do I need to create an account on the redBus site to book my bus ticket?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">No, you don’t have to create an account on the redBus site to book your bus ticket. But it is advisable to make one to accelerate the process next time you want to book bus tickets. Also, redBus has many discounts and offers that you can easily access if you have an account with us.</div>
+                </div>
+                
+               </div>
+               <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    Does bus booking online cost me more?
+                  </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Not at all! The bus ticket price is the same as you would get from the bus operator/ counter of any bus ticket agency. redbus reduces the travel budget by comparing the bus ticket prices among various operators, making it a more cost-effective choice. Therefore, online bus booking is increasingly recognized as a more convenient, efficient, and economical mode of securing travel arrangements.</div>
+              </div>
+            </div>
+          </div>
+             
+             
+            </div>
+          </div>
+        </div>
+      </section>
+        
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="JS/custom.js"></script>
+</html>
